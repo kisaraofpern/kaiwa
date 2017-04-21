@@ -41,7 +41,7 @@ feature "Sign up" do
     fill_in 'Email', with: 'skohto@dts'
     click_button 'Sign Up'
 
-    expect(page).to have_content "Password is too short (minimum is 6 chara)"
+    expect(page).to have_content "Password is too short (minimum is 6 chara"
     expect(page).to have_content "Password confirmation doesn't match Password"
     expect(page).to have_content "Email is not formatted properly"
   end
