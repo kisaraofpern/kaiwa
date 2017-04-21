@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '29032a754637093965037d6767e39161bcb6081d024396f7068ed04c67eb17a7731002d2e25bc35487e0b6531e54ad8aed65579ac225e0e94617193e129353e0'
+  # config.secret_key ='29032a754637093965037d6767e39161bcb6081d024396f7068ed04c67eb17a7731002d2e25bc35487e0b6531e54ad8aed65579ac225e0e94617193e129353e0'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -59,7 +59,7 @@ Devise.setup do |config|
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for
   # the given strategies, for example,
-  #{ }`config.params_authenticatable = [:database]` will
+  # { }`config.params_authenticatable = [:database]` will
   # enable it only for database (email + password) authentication.
   # config.params_authenticatable = true
 
