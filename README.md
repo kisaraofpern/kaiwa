@@ -2,7 +2,7 @@
 
 ![Build Status](https://codeship.com/projects/d564e980-0855-0135-4b2a-7639116c9856/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/kisaraofpern/kaiwa.png)
-![Coverage Status](https://coveralls.io/repos/kisaraofpern/kaiwa/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/kisaraofpern/kaiwa/badge.svg?branch=master)](https://coveralls.io/github/kisaraofpern/kaiwa?branch=master)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
