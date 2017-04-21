@@ -41,7 +41,7 @@ feature "Sign up" do
     fill_in 'Email', with: 'skohto@dts'
     click_button 'Sign Up'
 
-    expect(page).to have_content "Password is too short (minimum is 6 characters)"
+    expect(page).to have_content "Password is too short (minimum is 6 chara)"
     expect(page).to have_content "Password confirmation doesn't match Password"
     expect(page).to have_content "Email is not formatted properly"
   end
@@ -57,11 +57,11 @@ feature "Sign up" do
     fill_in 'Email', with: user.email
     click_button 'Sign Up'
 
-    expect(page).to have_content "An account already exists for that email address!"
+    expect(page).to have_content "An account already exists for that email add"
   end
 
   scenario "User gives username that already has an account" do
-    user = FactoryGirl.create(:user,
+    FactoryGirl.create(:user,
       username: "skohto")
 
     visit root_path
@@ -106,7 +106,7 @@ feature "sign in" do
     fill_in 'Password', with: 'wrongpassword'
     click_button 'Sign In'
 
-    expect(page).to have_content "Sorry! Invalid Username or Password. Please try again."
+    expect(page).to have_content "Sorry! Invalid Username or Password."
   end
 end
 
