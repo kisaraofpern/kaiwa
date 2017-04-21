@@ -41,9 +41,9 @@ feature "Sign up" do
     fill_in 'Email', with: 'skohto@dts'
     click_button 'Sign Up'
 
-    expect(page).to have_content "Password is too short (minimum is 7 characters)"
+    expect(page).to have_content "Password is too short (minimum is 6 characters)"
     expect(page).to have_content "Password confirmation doesn't match Password"
-    expect(page).to have_content "Email is not a valid email address"
+    expect(page).to have_content "Email is not formatted properly"
   end
 
   scenario "User gives email address that already has an account" do
@@ -61,6 +61,9 @@ feature "Sign up" do
   end
 
   scenario "User gives username that already has an account" do
+    user = FactoryGirl.create(:user,
+      username: "skohto")
+
     visit root_path
     click_link 'Sign Up'
     fill_in 'Username', with: 'skohto'
@@ -84,10 +87,10 @@ feature "sign in" do
     visit root_path
     click_link 'Sign In'
     fill_in 'Username', with: user.username
-    fill_in 'Password', with: user.password
+    fill_in 'Password', with: "password123"
     click_button 'Sign In'
 
-    expect(page).to have_content "Welcome back! You are signed in successfully."
+    expect(page).to have_content "Welcome back!"
     expect(page).to have_content "Signed in as #{user.username}"
     expect(page).not_to have_content "Sign Up"
     expect(page).not_to have_content "Sign In"
@@ -103,7 +106,7 @@ feature "sign in" do
     fill_in 'Password', with: 'wrongpassword'
     click_button 'Sign In'
 
-    expect(page).to have_content "Sorry! Wrong password. Please try again!"
+    expect(page).to have_content "Sorry! Invalid Username or Password. Please try again."
   end
 end
 
@@ -123,7 +126,7 @@ feature "sign out" do
 
     click_link 'Sign Out'
 
-    expect(page).to have_content "You have been signed out"
+    expect(page).to have_content "Signed out successfully."
     expect(page).not_to have_content user.username
     expect(page).to have_content "Sign Up"
     expect(page).to have_content "Sign In"
