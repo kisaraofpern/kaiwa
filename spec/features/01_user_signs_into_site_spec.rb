@@ -12,6 +12,7 @@ feature "Sign up" do
     fill_in 'Password', with: 'password123'
     fill_in 'Password Confirmation', with: 'password123'
     fill_in 'Email', with: 'sakura@dts.com'
+
     click_button 'Sign Up'
 
     expect(page).to have_content "Welcome! You have signed up successfully."
