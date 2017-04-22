@@ -1,0 +1,33 @@
+$white:       #ffffff;
+$dark_blue:   #345CAB;
+$warm_blue:   #648ECA;
+$light_blue:  #A5D9F6;
+$alert_red:   #CA6478;
+$transparent: rgba(0,0,0,0);
+
+@import url('https://fonts.googleapis.com/css?family=Asar|Raleway|Italianno');
+
+body {
+  background: url(vector_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: "Raleway", sans-serif;
+  color: $dark_blue;
+  margin: 0;
+
+}
+
+.navbar {
+  position: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Asar", serif
+}
+
+.sticky {
+  width: 100%;
+}

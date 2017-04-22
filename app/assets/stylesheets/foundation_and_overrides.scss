@@ -50,3 +50,22 @@
 //
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
+$transparent: rgba(0,0,0,0);
+
+.top-bar,
+.top-bar ul {
+  background-color: $transparent;
+}
+
+.top-bar-left {
+  position: relative;
+}
+
+.top-bar-right {
+  padding: 0.5em;
+  position: relative;
+}
+
+.menu-text {
+  font-size: 2em;
+}
