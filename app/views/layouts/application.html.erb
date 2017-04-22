@@ -19,20 +19,22 @@
             <div class="top-bar-left">
               <ul class="menu">
                 <li class="menu-text">
-                  <h2><span style="font-family: Italianno"><%= link_to "Kaiwa", root_path %></span></h2>
-                </li>
-                <li>
-                  <div class="input-group input-group-rounded">
-                    <input class="input-group-field" type="search">
-                    <div class="input-group-button">
-                      <input type="submit" class="button secondary" value="Search">
-                    </div>
-                  </div>
+                  <span style="font: 400 2.0em/100% 'Italianno', Helvetica, Sans-serif;">
+                    <%= link_to "Kaiwa", root_path %>
+                  </span>
                 </li>
               </ul>
             </div>
             <div class="top-bar-right">
               <ul class="menu sign-up">
+                <li>
+                  <div class="input-group input-group-rounded">
+                    <input class="search-field" type="text" placeholder="title, genre, etc.">
+                    <div class="input-group-button">
+                      <input type="submit" class="button secondary search" value="Search">
+                    </div>
+                  </div>
+                </li>
                 <% if user_signed_in? %>
                   <li> Signed in as <%= current_user.username %> | </li>
                   <li>
