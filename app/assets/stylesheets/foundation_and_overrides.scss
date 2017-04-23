@@ -1,7 +1,7 @@
-@charset 'utf-8';
+@charset "utf-8";
 
-@import 'settings';
-@import 'foundation';
+@import "settings";
+@import "foundation";
 
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
 //
@@ -50,13 +50,13 @@
 //
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
-$transparent: rgba(0,0,0,0);
-$dark_blue:   #345CAB;
-$light_blue:  #A5D9F6;
+$transparent: rgba(0, 0, 0, 0);
+$dark-blue:   #345cab;
+$light-blue:  #A5d9f6;
 
 .top-bar,
 .top-bar ul {
-  background-color: $light_blue;
+  background-color: $light-blue;
 }
 
 .top-bar-left,
@@ -69,6 +69,7 @@ $light_blue:  #A5D9F6;
 }
 
 .menu-text {
+  color: $dark-blue;
   font-size: 2em;
   padding: 0;
 }
@@ -76,8 +77,4 @@ $light_blue:  #A5D9F6;
 .input-group,
 .input-group-rounded {
   margin: 0;
-}
-
-.menu-text a {
-  color: $dark_blue;
 }
