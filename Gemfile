@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.4.0"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -13,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'foundation-rails'
+gem 'dotenv'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
