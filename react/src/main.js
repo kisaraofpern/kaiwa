@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AnimeShowContainer from './components/animeShowContainer';
+import AnimeShowContainer from './containers/animeShowContainer';
 
 $(function() {
   ReactDOM.render(
