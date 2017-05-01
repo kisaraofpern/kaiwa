@@ -32,14 +32,12 @@ class AnimeShowContainer extends Component {
 
   render() {
     return (
-      <div className="container">
-        < AnimePresentationTile
-          id = "1"
-          animeObject = {this.state.animeObject}
-          clickEvent = {this.onClick}
-          activeTile = {this.state.activeTile}
-        />
-      </div>
+      < AnimePresentationTile
+        id = "1"
+        animeObject = {this.state.animeObject}
+        clickEvent = {this.onClick}
+        activeTile = {this.state.activeTile}
+      />
     );
   }
 

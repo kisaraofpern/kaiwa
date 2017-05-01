@@ -30,16 +30,14 @@ class AnimePresentationTile extends Component {
           </div>
         } else {
           animeTileComponent =
-            <div>
-              <div className="left columns small-3 medium-3 large-3">
-                <img src={this.props.animeObject.image_url_lge} id={id} />
-              </div>
+            <div className="left columns small-3 medium-3 large-3">
+              <img src={this.props.animeObject.image_url_lge} id={id} />
             </div>
         }
       }
 
     return (
-      <div onClick={this.props.clickEvent} className="foo">
+      <div onClick={this.props.clickEvent} className="container">
         {animeTileComponent}
       </div>
     )
