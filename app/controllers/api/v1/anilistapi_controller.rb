@@ -26,7 +26,6 @@ class Api::V1::AnilistapiController < Api::V1::BaseController
     uri.query = URI.encode_www_form(params)
     res = Net::HTTP.get_response(uri)
     data = JSON.parse(res.body)
-    binding.pry
     respond_with data
   end
 
