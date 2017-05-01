@@ -23,3 +23,21 @@ $(function() {
       $(".search-field").toggleClass("expand-search");
     });
 });
+
+$(function() {
+  $(".left")
+    .bind('click', function (event) {
+      $(".panel").css("width","34px");
+      $(".left").hide();
+      $(".right").show();
+    });
+});
+
+$(function() {
+  $(".right")
+    .bind('click', function (event) {
+      $(".panel").css("width","20vw");
+      $(".right").hide();
+      $(".left").show();
+    });
+});

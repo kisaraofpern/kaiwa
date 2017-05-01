@@ -18,3 +18,8 @@
 
 /coverage
 .env
+
+# Ignore React.js node modules and associated noise.
+/node_modules
+/app/assets/javascripts/bundle.js
+/react/coverage
