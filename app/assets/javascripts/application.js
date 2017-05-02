@@ -25,19 +25,8 @@ $(function() {
 });
 
 $(function() {
-  $(".left")
-    .bind('click', function (event) {
-      $(".panel").css("width","34px");
-      $(".left").hide();
-      $(".right").show();
-    });
-});
-
-$(function() {
-  $(".right")
-    .bind('click', function (event) {
-      $(".panel").css("width","20vw");
-      $(".right").hide();
-      $(".left").show();
+  $(".anime-tile")
+    .bind('click', function(event) {
+      $(".anime-tile-content").toggleClass("expand-anime-tile");
     });
 });
