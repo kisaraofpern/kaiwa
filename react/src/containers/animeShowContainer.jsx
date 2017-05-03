@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import AnimePresentationTile from '../components/animePresentationTile';
-
-class AnimeShowContainer extends Component {
+class AnimeShowContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +37,4 @@ class AnimeShowContainer extends Component {
       />
     );
   }
-
 }
-
-export default AnimeShowContainer;
