@@ -40,7 +40,6 @@ class AnimeShowContainer extends Component {
       />
     );
   }
-
 }
 
 export default AnimeShowContainer;
