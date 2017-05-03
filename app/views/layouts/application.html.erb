@@ -31,7 +31,11 @@
                 <li>
                   <form action="/" method="get">
                     <div class="input-group input-group-rounded">
-                      <input class="search-field" type="text" name="search" placeholder="title, genre, etc.">
+                      <% if @query %>
+                        <input class="search-field expand-search" type="text" name="search" placeholder="title, genre, etc." value="<%=@query%>">
+                      <% else %>
+                        <input class="search-field" type="text" name="search" placeholder="title, genre, etc.">
+                      <% end %>
                       <div class="input-group-button">
                         <input type="submit" class="button secondary search" value="Search">
                       </div>

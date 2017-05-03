@@ -5,6 +5,6 @@ class Title < ApplicationRecord
   validates :language, presence: true
 
   def self.search(search)
-    where("full_title ILIKE ?", "%#{search}")
+    where('full_title ILIKE ?', "%#{search}%")
   end
 end

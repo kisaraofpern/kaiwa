@@ -28,7 +28,7 @@ $(function() {
 
 $(function() {
   $('form').submit( (event) => {
-    if(!$(".search-field").val()) {
+    if($(".search-field").val().length < 1) {
       event.preventDefault();
     }
   });
