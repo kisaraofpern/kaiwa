@@ -1,2 +1,8 @@
-<div id="app">
-</div>
+<% if @titles.length > 0 %>
+  <% @titles.each do |title| %>
+    <%= title.full_title %><br />
+  <% end %>
+<% else %>
+  <div id="app">
+  </div>
+<% end %>

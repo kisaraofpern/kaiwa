@@ -20,13 +20,16 @@ $(function(){ $(document).foundation(); });
 $(function() {
   $('.search')
     .bind('click', function(event) {
-      $(".search-field").toggleClass("expand-search");
+      if(!$(".search-field").val()) {
+        $(".search-field").toggleClass("expand-search");
+      }
     });
 });
 
 $(function() {
-  $(".anime-tile")
-    .bind('click', function(event) {
-      $(".anime-tile-content").toggleClass("expand-anime-tile");
-    });
+  $('form').submit( (event) => {
+    if(!$(".search-field").val()) {
+      event.preventDefault();
+    }
+  });
 });
