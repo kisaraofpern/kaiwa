@@ -10,4 +10,4 @@ $(function() {
     </div>,
     document.getElementById('app')
   );
--});
+});

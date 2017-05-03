@@ -21,7 +21,7 @@ class Api::V1::AnilistapiController < Api::V1::BaseController
       get_access_token
     end
 
-    uri = URI("https://anilist.co/api/anime/search/title_english=cowboy+bebop")
+    uri = URI("https://anilist.co/api/anime/1")
     params = { access_token: @access_token }
     uri.query = URI.encode_www_form(params)
     res = Net::HTTP.get_response(uri)
